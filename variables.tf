@@ -47,3 +47,8 @@ variable "placeholder" {
   default     = "placekitten.com"
   description = "Image-as-a-service URL. Some other fun ones to try are fillmurray.com, placecage.com, placebeard.it, loremflickr.com, baconmockup.com, placeimg.com, placebear.com, placeskull.com, stevensegallery.com, placedog.net"
 }
+
+variable "allowed_inbound_cidrs" {
+  type        = list(string)
+  description = "List of CIDR blocks to permit inbound Nomad access from"
+}
