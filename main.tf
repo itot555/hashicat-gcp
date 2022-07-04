@@ -34,7 +34,7 @@ resource "google_compute_firewall" "http-server" {
   }
 
   // Allow traffic from everywhere to instances with an http-server tag
-  source_ranges = ["${var.allowed_inbound_cidrs}"]
+  source_ranges = [var.allowed_inbound_cidrs]
   target_tags   = ["http-server"]
 }
 
